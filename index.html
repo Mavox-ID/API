@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecogreen Server</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        #apiMessage {
+            display: none;
+            font-size: 24px;
+            color: green;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Сервер работает с криптовалютой Ecogreen!</h1>
+    <button id="dataButton">Данные</button>
+    
+    <div id="passwordPrompt" style="display: none;">
+        <input type="password" id="password" placeholder="Введите пароль">
+        <button id="submitPassword">Отправить</button>
+    </div>
+
+    <div id="apiMessage">Сервер отправляет и принимает запросы API!</div>
+
+    <script>
+        document.getElementById('dataButton').onclick = function() {
+            document.getElementById('passwordPrompt').style.display = 'block';
+        };
+
+        document.getElementById('submitPassword').onclick = function() {
+            const password = document.getElementById('password').value;
+            if (password === 'EcogreenPass') {
+                document.getElementById('apiMessage').style.display = 'block';
+            } else {
+                alert('Неверный пароль!');
+            }
+        };
+    </script>
+</body>
+</html>
