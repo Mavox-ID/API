@@ -1,48 +1,37 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecogreen Server</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 50px;
-        }
-        #apiMessage {
-            display: none;
-            font-size: 24px;
-            color: green;
-            margin-top: 20px;
-        }
-    </style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+	<link rel="stylesheet" href="./style.css">
+	<title>SSTV - Главная</title>
 </head>
+<nav class="container">
+  <ul>
+    <li><strong><a href="./index.html" class="contrast">SSTV - Главная</a></strong></li>
+  </ul>
+  <ul>
+    <li><a href="./encode.html">Encode</a></li>
+    <li><a href="./decode.html">Decode</a></li>
+    <li><a href="./learn.html">О Услуге</a></li>
+  </ul>
+</nav>
 <body>
-    <h1>Сервер работает с криптовалютой Ecogreen!</h1>
-    <button id="dataButton">Данные</button>
-    
-    <div id="passwordPrompt" style="display: none;">
-        <input type="password" id="password" placeholder="Введите пароль">
-        <button id="submitPassword">Отправить</button>
-    </div>
-
-    <div id="apiMessage">Сервер отправляет и принимает запросы API</div>
-    <div id="apiMessage">Внимание! Ето информация для администратора! Если ви как-то узнали то немедленно закрой ето окно! Иначе вас могут оштрафовать на 1000 USD! Спасибо за внимание!</div>
-
-    <script>
-        document.getElementById('dataButton').onclick = function() {
-            document.getElementById('passwordPrompt').style.display = 'block';
-        };
-
-        document.getElementById('submitPassword').onclick = function() {
-            const password = document.getElementById('password').value;
-            if (password === 'EcogreenPass') {
-                document.getElementById('apiMessage').style.display = 'block';
-            } else {
-                alert('Неверный пароль!');
-            }
-        };
-    </script>
+	<main class="container">
+		<h4>Информация:</h4>
+		<p>Привет! Ето новая функция от QQ-my где ви сможете кодировать и расшифровивать фото смомощью SSTV!</p>
+		<p>Информация про функции и так далее <a class="nav-link" href="learn.html">тут</a></p>
+		<p>Также ми рекомендуем использовать например приложение Robot-36 для расшифровки фото</p>
+		<p>Данная услуга являеться полностью бесплатной!</p>
+		<p>И также создана QQ-my и имеет авторские права!</p>
+	</main>
+	<footer class="container">
+		<small>QQ-my. SSTV. decode-encode</small>
+		<br>
+		<small><a href="https://qq-my.pp.ua">Переходите на QQ-my</a></small>
+		<br>
+		<small>&copy <script>document.write(new Date().getFullYear())</script> QQ-my - All rights reserved</small>
+	</footer>
 </body>
 </html>
