@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Фонд SEKT</title>
+    <title>Euclid - Фонд SEKT</title>
     <style>
         body {
             background-color: #0a0a0a;
@@ -25,38 +25,37 @@
             text-shadow: 0 0 10px #00cc00, 0 0 20px #00cc00;
             opacity: 0.9;
         }
-        .header p {
-            font-size: 18px;
+        .header h1 a {
             color: #00cc00;
-            max-width: 800px;
-            margin: 10px auto;
-            letter-spacing: 2px;
-            line-height: 1.5;
-            text-shadow: 0 0 5px #00cc00;
-            opacity: 0.8;
+            text-decoration: none;
         }
-        .buttons {
+        .header h1 a:hover {
+            text-shadow: 0 0 15px #00cc00;
+        }
+        .objects-list {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 15px;
             padding: 40px;
+            max-height: 70vh;
+            overflow-y: auto;
         }
-        .button {
+        .object-button {
             background-color: rgba(0, 204, 0, 0.3);
             color: #00cc00;
-            padding: 20px 50px; /* Базуємося на "Продано/Куплено" як найдовшому */
+            padding: 15px 30px;
             font-size: 20px;
             border: 1px solid rgba(0, 204, 0, 0.5);
             cursor: pointer;
             border-radius: 5px;
             text-decoration: none;
             transition: transform 0.3s, background-color 0.3s;
-            width: 250px; /* Фіксована ширина для однакового розміру */
+            width: 250px;
             text-shadow: 0 0 5px #00cc00;
             backdrop-filter: blur(3px);
         }
-        .button:hover {
+        .object-button:hover {
             transform: scale(1.1);
             background-color: rgba(0, 204, 0, 0.5);
         }
@@ -64,14 +63,14 @@
 </head>
 <body>
     <div class="header">
-        <h1>Добро пожаловать в Фонд SEKT</h1>
-        <p>Мы защищаем человечество от аномалий.</p>
+        <h1>Euclid - <a href="https://regiaapioou.pp.ua/" target="_self">Фонд SEKT</a></h1>
     </div>
-    <div class="buttons">
-        <a href="objects/objects.html" class="button">Объекты</a>
-        <a href="classes/classes.html" class="button">Класси</a>
-        <a href="sold_bought/sold_bought.html" class="button">Продано/Куплено</a>
-        <a href="info/info.html" class="button">Информация</a>
+    <div class="objects-list">
+        <a href="sekt-002.html" class="object-button">Объект SEKT-002</a>
+        <a href="sekt-004.html" class="object-button">Объект SEKT-004</a>
+        <a href="sekt-005.html" class="object-button">Объект SEKT-005</a>
+        <a href="sekt-013.html" class="object-button">Объект SEKT-013</a>
+        <a href="sekt-017.html" class="object-button">Объект SEKT-017</a>
     </div>
 </body>
 </html>
