@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Объект SEKT-001 - SEKT</title>
+  <style>
+    body {
+      background-color: #0a0a0a;
+      color: #00cc00;
+      font-family: 'Courier New', monospace;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .header {
+      padding: 40px;
+      background-color: rgba(0, 0, 0, 0.7);
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 32px;
+      margin: 0;
+      text-shadow: 0 0 10px #00cc00;
+    }
+
+    .header h1 a {
+      color: #00cc00;
+      text-decoration: none;
+    }
+
+    .header h1 a:hover {
+      text-shadow: 0 0 15px #00cc00;
+    }
+
+    .content {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+      flex-grow: 1;
+      gap: 40px;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    .info-section {
+      max-width: 500px;
+      min-height: 300px;
+    }
+
+    .details {
+      background-color: rgba(0, 204, 0, 0.1);
+      border: 2px solid rgba(0, 204, 0, 0.5);
+      padding: 15px;
+      border-radius: 5px;
+      text-shadow: 0 0 5px #00cc00;
+      height: 100%;
+    }
+
+    .details p {
+      margin: 10px 0;
+    }
+
+    .image-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 2px solid #00cc00;
+      padding: 10px;
+      border-radius: 5px;
+      max-width: 320px;
+      background-color: rgba(0, 204, 0, 0.05);
+      min-height: 300px;
+    }
+
+    .image-box img {
+      width: 100%;
+      max-height: 200px;
+      border: 2px dashed #00cc00;
+      background-color: #000;
+      padding: 5px;
+      margin-bottom: 10px;
+      object-fit: contain;
+    }
+
+    .image-caption {
+      border-top: 1px solid #00cc00;
+      padding-top: 8px;
+      font-size: 14px;
+      color: #00ff00;
+    }
+
+    .siren {
+      display: none;
+      width: 50px;
+      height: 50px;
+      border: 2px solid #00cc00;
+      border-radius: 50%;
+      margin: 20px auto;
+      animation: sirenRotate 1s infinite linear;
+      position: relative;
+    }
+
+    .siren::before,
+    .siren::after {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 30px;
+      background-color: #00cc00;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    .siren::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    @keyframes sirenRotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Объект SEKT-001 - <a href="index.html">Фонд SEKT</a></h1>
+  </div>
+
+  <div class="content">
+    <div class="info-section">
+      <div class="details">
+        <p><strong>Класс:</strong> Safe</p>
+        <p><strong>Уровень доступа:</strong> 1</p>
+        <p><strong>Описание:</strong> Аномальный кристалл, который иногда становится красным после снега, всегда падает в снегу.</p>
+        <p><strong>Условия содержания:</strong> В пакете.</p>
+        <p><strong>Примечание:</strong> Можно брать с осторожностью, пользы еще не выявлено.</p>
+      </div>
+      <div class="siren" id="siren"></div>
+    </div>
+
+    <div class="image-box">
+      <img src="001.png" alt="SEKT-001">
+      <div class="image-caption">SEKT-001 На момент обнаружения</div>
+    </div>
+  </div>
+
+  <script>
+    let sirenStatus = "off";
+    const sirenElement = document.getElementById("siren");
+    if (sirenStatus === "on") {
+      sirenElement.style.display = "block";
+    }
+  </script>
+</body>
+</html>

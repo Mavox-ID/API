@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - SEKT</title>
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #00cc00;
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+        .night-vision {
+            filter: grayscale(100%) brightness(200%) hue-rotate(90deg);
+        }
+        .sekt-017 {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            animation: fall 5s infinite;
+        }
+        @keyframes fall {
+            0% { top: -20%; }
+            50% { top: 50%; }
+            100% { top: 100%; }
+        }
+        .error-text {
+            position: relative;
+            z-index: 1;
+            font-size: 48px;
+            text-align: center;
+            text-shadow: 0 0 10px #00cc00;
+            opacity: 0.9;
+        }
+        .body-shadow {
+            position: absolute;
+            bottom: -20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 300px;
+            background: linear-gradient(to bottom, rgba(0, 204, 0, 0.3), rgba(0, 0, 0, 0.8));
+            filter: blur(10px);
+            animation: fade 5s infinite;
+        }
+        @keyframes fade {
+            0% { opacity: 0.3; }
+            50% { opacity: 0.8; }
+            100% { opacity: 0.3; }
+        }
+    </style>
+</head>
+<body>
+    <div class="error-text">404 - Объект не найден</div>
+    <img src="017.jpg" alt="SEKT-017" class="sekt-017 night-vision">
+    <div class="body-shadow"></div>
+</body>
+</html>
