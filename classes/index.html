@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes - SEKT</title>
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #ffffff;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .header {
+            padding: 50px;
+            background-color: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+        }
+        .header h1 {
+            font-size: 36px;
+            margin: 0;
+            text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
+            opacity: 0.9;
+        }
+        .header h1 a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .header h1 a:hover {
+            text-shadow: 0 0 15px #000000;
+        }
+        .objects-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            padding: 40px;
+            max-height: 70vh;
+            overflow-y: auto;
+        }
+        .classes-button {
+            display: inline-block;
+            background-color: rgba(40, 40, 40, 0.5);
+            color: #e0e0e0;
+            padding: 18px 0;
+            width: 300px;
+            font-size: 18px;
+            font-family: 'Courier New', monospace;
+            border: 1px solid rgba(120, 120, 120, 0.4);
+            border-radius: 15px;
+            cursor: pointer;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(8px);
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        .classes-button:hover {
+            background-color: rgba(70, 70, 70, 0.8);
+            border-color: #ffffff;
+            color: #ffffff;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5), 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+
+        .classes-button:active {
+            transform: translateY(1px);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Classes - <a href="https://regiaapioou.pp.ua/" target="_self">SEKT // Archive</a></h1>
+    </div>
+    <div class="objects-list">
+        <p>The classes of objects in the SEKT collection archive are designated as:</p>
+        <p>Contact Impact Aggression Mortality | Example: +|-|-|-</p>
+        <p>+|-|-|- means that the object does something only when you interact with it, for example, when you pick it up</p>
+        <p>An object class that has all minuses means that it is either neutralized or has no more anomalous properties at all.</p>
+        <a href="-|-|-|-" class="classes-button">-|-|-|-</a>
+        <a href="+|-|-|-" class="classes-button">+|-|-|-</a>
+        <a href="+|+|-|-" class="classes-button">+|+|-|-</a>
+    </div>
+</body>
+</html>

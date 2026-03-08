@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SEKT-002 - SEKT</title>
+  <style>
+    body {
+      background-color: #0a0a0a;
+      color: #cccccc;
+      font-family: 'Courier New', monospace;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .header {
+      padding: 40px;
+      background-color: rgba(0, 0, 0, 0.7);
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 32px;
+      margin: 0;
+      text-shadow: 0 0 10px #cccccc;
+    }
+
+    .header h1 a {
+      color: #cccccc;
+      text-decoration: none;
+    }
+
+    .header h1 a:hover {
+      text-shadow: 0 0 15px #cccccc;
+    }
+
+    .content {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+      flex-grow: 1;
+      gap: 40px;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    .info-section {
+      max-width: 500px;
+      min-height: 300px;
+    }
+
+    .details {
+      background-color: rgba(204, 204, 204, 0.1);
+      border: 2px solid rgba(204, 204, 204, 0.5);
+      padding: 15px;
+      border-radius: 5px;
+      text-shadow: 0 0 5px #cccccc;
+      height: 100%;
+    }
+
+    .details p {
+      margin: 10px 0;
+    }
+
+    .image-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 2px solid #cccccc;
+      padding: 10px;
+      border-radius: 5px;
+      max-width: 320px;
+      background-color: rgba(204, 204, 204, 0.05);
+      min-height: 300px;
+    }
+
+    .image-box img {
+      width: 100%;
+      max-height: 200px;
+      border: 2px dashed #cccccc;
+      background-color: #000;
+      padding: 5px;
+      margin-bottom: 10px;
+      object-fit: contain;
+    }
+
+    .image-caption {
+      border-top: 1px solid #cccccc;
+      padding-top: 8px;
+      font-size: 14px;
+      color: #cccccc;
+    }
+
+    .siren {
+            width: 50px;
+            height: 50px;
+            background-color: transparent;
+            border: 2px solid #000000;
+            border-radius: 50%;
+            position: relative;
+            margin: 0 auto 10px;
+            animation: sirenBlink 1s infinite;
+            display: none;
+        }
+        .siren::before,
+        .siren::after {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 30px;
+            background-color: #808080;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+        .siren::after {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+        @keyframes sirenBlink {
+            0%, 100% { box-shadow: 0 0 10px #ff0000; }
+            50% { box-shadow: 0 0 20px #ff0000, 0 0 30px #ff0000; }
+        }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Object SEKT-002 - <a href="https://regiaapioou.pp.ua/" target="_self">SEKT // Archive</a></h1>
+  </div>
+  <div class="content">
+    <div class="info-section">
+      <div class="details">
+        <p><strong>Class:</strong> +|+|-|-</p>
+        <p><strong>Description:</strong> It is a black bag containing white gauze soaked in an unknown liquid. After someone sniffs it for 20 minutes, they become very relaxed and lose their aggression. The subject may not feel it, but it is clearly visible to others.</p>
+        <p><strong>Conditions of storage:</strong> In a bag, in a safe.</p>
+        <p><strong>Note:</strong> Without access, use is prohibited, currently 2 packages are stored, 3 were used, total 5.</p>
+        <div class="siren" id="siren"></div>
+      </div>
+    </div>
+
+    <div class="image-box">
+      <img src="002.png" alt="SEKT-002">
+      <div class="image-caption">SEKT-002 on the floor, closed</div>
+    </div>
+  </div>
+
+  <script>
+    let sirenStatus = "off";
+    const sirenElement = document.getElementById("siren");
+    if (sirenStatus === "on") {
+      sirenElement.style.display = "block";
+    }
+  </script>
+</body>
+</html>

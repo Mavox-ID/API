@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info - SEKT</title>
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #ffffff;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .header {
+            padding: 50px;
+            background-color: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+        }
+        .header h1 {
+            font-size: 36px;
+            margin: 0;
+            text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
+            opacity: 0.9;
+        }
+        .header h1 a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .header h1 a:hover {
+            text-shadow: 0 0 15px #ffffff;
+        }
+        .content {
+            padding: 40px;
+            max-height: 70vh;
+            overflow-y: auto;
+        }
+        .nus-section {
+            margin-bottom: 40px;
+        }
+        .nus-section h2 {
+            font-size: 24px;
+            text-shadow: 0 0 5px #ffffff;
+            margin-bottom: 10px;
+        }
+        .siren {
+            width: 50px;
+            height: 50px;
+            background-color: transparent;
+            border: 2px solid #000000;
+            border-radius: 50%;
+            position: relative;
+            margin: 0 auto 10px;
+            animation: sirenBlink 1s infinite;
+        }
+        .siren::before,
+        .siren::after {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 30px;
+            background-color: #808080;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+        .siren::after {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+        @keyframes sirenBlink {
+            0%, 100% { box-shadow: 0 0 10px #ff0000; }
+            50% { box-shadow: 0 0 20px #ff0000, 0 0 30px #ff0000; }
+        }
+        .nus-item {
+            background-color: rgba(0, 204, 0, 0.1);
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            border: 1px solid rgba(0, 204, 0, 0.3);
+        }
+        .stats-section {
+            background-color: rgba(0, 204, 0, 0.1);
+            padding: 20px;
+            border-radius: 5px;
+            border: 1px solid rgba(0, 204, 0, 0.3);
+        }
+        .stats-section p {
+            margin: 5px 0;
+            text-shadow: 0 0 3px #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Info - <a href="https://regiaapioou.pp.ua/" target="_self">SEKT // Archive</a></h1>
+    </div>
+    <div class="content">
+        <div class="nus-section">
+            <h2>Important notice!</h2>
+            <div class="siren"></div>
+            <div class="nus-item">
+                <p>All who read information about real anomalies confirm that they will maintain the strictest confidentiality regarding information not classified by [Redacted] or ███</p>
+                <p>Thank you!</p>
+            </div>
+        </div>
+        </div>
+        <div class="stats-section">
+            <h2>SEKT Foundation Conclusion</h2>
+            <p>Thank you for viewing the site and the anomalies from the 2024 archive. If you have any questions, please contact unercloaddatapacked@gmail.com</p>
+            <p>Sincerely, SEKT Foundation.</p>
+            <p>================</p>
+            <p>ИОС: V.155 (pOe)>>>STV</p>
+        </div>
+    </div>
+</body>
+</html>
